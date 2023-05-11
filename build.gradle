@@ -31,6 +31,23 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation 'org.projectlombok:lombok' // 롬복 -> Getter, Setter, 기본생성자, toString 등을 어노테이션으로 자동 생성해줌
+    annotationProcessor ('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+    testImplementation('org.projectlombok:lombok')
+    
+    // JPA implementation
+    // JPA의 역할
+    // - 서로 지양하는 바가 다른 2개 영역(객체지향 프로그래밍 언어와 관계형 데이터베이스)을 중간에서 패러다임 일치를 시켜주기 위한 기술
+    // - 개발자는 객체지향적으로 프로그래밍을 하고, JPA가 이를 관계형 데이터베이스에 맞게 SQL을 대신 생성해서 실행
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 test {
