@@ -9,10 +9,15 @@ com/dahoon/springboot/web/HelloController.java
 com/dahoon/springboot/domain/posts/Posts.java
  com.dahoon.springboot.domain.posts.Posts
  com.dahoon.springboot.domain.posts.Posts$PostsBuilder
+com/dahoon/springboot/web/dto/PostsSaveRequestDto.java
+ com.dahoon.springboot.web.dto.PostsSaveRequestDto
+ com.dahoon.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
+com/dahoon/springboot/web/dto/PostsUpdateRequestDto.java
+ com.dahoon.springboot.web.dto.PostsUpdateRequestDto
+ com.dahoon.springboot.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
+com/dahoon/springboot/web/dto/PostsResponseDto.java
+ com.dahoon.springboot.web.dto.PostsResponseDto
 com/dahoon/springboot/web/PostsApiController.java
  com.dahoon.springboot.web.PostsApiController
 com/dahoon/springboot/service/posts/PostsService.java
  com.dahoon.springboot.service.posts.PostsService
-com/dahoon/springboot/web/dto/PostsSaveRequestDto.java
- com.dahoon.springboot.web.dto.PostsSaveRequestDto
- com.dahoon.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder

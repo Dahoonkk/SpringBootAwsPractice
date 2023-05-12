@@ -1,8 +1,11 @@
 package com.dahoon.springboot.service.posts;
 
+import com.dahoon.springboot.domain.posts.Posts;
 import com.dahoon.springboot.domain.posts.PostsRepository;
+import com.dahoon.springboot.web.dto.PostsResponseDto;
 import com.dahoon.springboot.web.dto.PostsSaveRequestDto;
 
+import com.dahoon.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +21,22 @@ public class PostsService {
     @Transactional
     public Long save(PostsSaveRequestDto requestDto) {
         return postsRepository.save(requestDto.toEntity()).getId();
+    }
+
+    public Long update(Long id, PostsUpdateRequestDto requestDto) {
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new
+                IllegalArgumentException(("해당 게시글이 업습니다. id = "+id)));
+
+        posts.update(requestDto.getTitle(), requestDto.getContent());
+
+        return id;
+    }
+
+    public PostsResponseDto findById(Long id) {
+        Posts entity = postsRepository.findById(id)
+                .orElseThrow(() -> new
+                        IllegalArgumentException("해당 게시글이 업습니다. id = " + id));
+
+        return new PostsResponseDto(entity);
     }
 }

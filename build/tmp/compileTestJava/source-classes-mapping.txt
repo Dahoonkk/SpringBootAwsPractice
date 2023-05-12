@@ -1,0 +1,8 @@
+com/dahoon/springboot/web/dto/HelloResponseDtoTest.java
+ com.dahoon.springboot.web.dto.HelloResponseDtoTest
+com/dahoon/springboot/web/HelloControllerTest.java
+ com.dahoon.springboot.web.HelloControllerTest
+com/dahoon/springboot/web/PostsApiControllerTest.java
+ com.dahoon.springboot.web.PostsApiControllerTest
+com/dahoon/springboot/domain/posts/PostRepositoryTest.java
+ com.dahoon.springboot.domain.posts.PostRepositoryTest
